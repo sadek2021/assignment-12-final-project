@@ -1,0 +1,14 @@
+.des-banner{
+    background: url(https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* padding: 80px 0; */
+}
+.des-title{
+    font-size: 50px;
+}
+.content{
+    position: relative;
+}

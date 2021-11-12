@@ -1,0 +1,11 @@
+.about-banner{
+    background: url(http://smartdemowp.com/tripo/wp-content/themes/tripo/assets/images/backgrounds/page-header-contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 150px 0;
+}
+.about-title{
+    font-size: 60px;
+}
