@@ -17,7 +17,7 @@ const OrderItem = (props) => {
                             <h6>Address: {address}</h6>
                             <h6>Contact: {phone}</h6>
                             <h6>Status: <span className="text-danger">{status}</span></h6>
-                            <h4>{price}</h4>
+                            <h4 className="text-danger">{price}</h4>
                         </div>
                         <div className="d-flex justify-content-between align-items-center">
                             <button onClick={() => props.handleDeleteProduct(_id)} type="button" className="btn btn-outline-danger btn-sm">Cancel</button>

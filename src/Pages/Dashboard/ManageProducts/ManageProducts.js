@@ -27,9 +27,8 @@ const ManageProducts = () => {
     };
     return (
         <div>
-            <div className="banner-product banner-ps mb-5 text-center text-white">
-                <h1>MANAGE <span className="text-color fw-bold">PRODUCTS</span></h1>
-                <h5>ADMIN CAN HANDLE THIS</h5>
+            <div className="banner-product banner-ps my-5 text-center text-white">
+                <h1 className="text-danger fw-bold">Manage Products</h1>
             </div>
             <div className="container">
                 <div className="container my-5">

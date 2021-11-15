@@ -1,11 +1,8 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import useAuth from '../../Hooks/useAuth/useAuth';
 
 const ManageProductItem = (props) => {
-    const { allContext } = useAuth();
-    const { ColorButton } = allContext;
-    const { _id, img, name, description, price } = props.product;
+    const { _id, img, name, detail, price } = props.product;
     return (
         <div>
             <Col className="shadow-lg text-center">
@@ -14,13 +11,13 @@ const ManageProductItem = (props) => {
                     <Card.Body>
                         <Card.Title className="text-color">{name}</Card.Title>
                         <div>
-                            <p>{description}</p>
+                            <p>{detail}</p>
                         </div>
                         <div className="d-flex justify-content-between align-items-center">
-                            <ColorButton onClick={() => props.handleDeleteProduct(_id)} variant="contained" size="small">
+                            <button onClick={() => props.handleDeleteProduct(_id)} className="btn btn-outline-danger btn-sm">
                                 Delete
-                            </ColorButton>
-                            <h4><span className="text-color">${price}</span></h4>
+                            </button>
+                            <h4><span className="text-danger">${price}</span></h4>
                         </div>
                     </Card.Body>
                 </Card>

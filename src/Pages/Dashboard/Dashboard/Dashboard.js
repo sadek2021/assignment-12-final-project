@@ -38,7 +38,7 @@ import AdminRoute from '../../../AdminRoute/AdminRoute';
 import Footer from '../../Footer/Footer';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 
-const drawerWidth = 230;
+const drawerWidth = 240;
 
 function Dashboard(props) {
     const { window } = props;
@@ -62,9 +62,9 @@ function Dashboard(props) {
             <Divider />
             <Toolbar />
             <List>
-                <Link style={{ textDecoration: 'none', color:'#EC9C31' }} to="/">
+                <Link style={{ textDecoration: 'none', color:'black' }} to="/">
                     <ListItem button>
-                        <ListItemIcon sx={{ color: 'black' }}>
+                        <ListItemIcon sx={{ color: '#DC3545' }}>
                             <HomeIcon />
                         </ListItemIcon>
                         <ListItemText>
@@ -72,9 +72,9 @@ function Dashboard(props) {
                         </ListItemText>
                     </ListItem>
                 </Link>
-                <Link style={{ textDecoration: 'none', color: '#EC9C31' }} to={`${url}`}>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}`}>
                     <ListItem button>
-                        <ListItemIcon sx={{ color: 'black' }}>
+                        <ListItemIcon sx={{ color: '#DC3545' }}>
                             <DashboardIcon />
                         </ListItemIcon>
                         <ListItemText >
@@ -82,9 +82,9 @@ function Dashboard(props) {
                         </ListItemText>
                     </ListItem>
                 </Link>
-                <Link style={{ textDecoration: 'none', color: '#EC9C31' }} to="/products">
+                <Link style={{ textDecoration: 'none', color: 'black' }} to="/products">
                     <ListItem button>
-                        <ListItemIcon sx={{ color: 'black' }}>
+                        <ListItemIcon sx={{ color: '#DC3545' }}>
                             <AddShoppingCartIcon />
                         </ListItemIcon>
                         <ListItemText >
@@ -93,9 +93,9 @@ function Dashboard(props) {
                     </ListItem>
                 </Link>
                 {!admin ? <Box>
-                    <Link style={{ textDecoration: 'none', color: '#EC9C31' }} to={`${url}/myOrders`}>
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/myOrders`}>
                         <ListItem button>
-                            <ListItemIcon sx={{ color: 'black' }}>
+                            <ListItemIcon sx={{ color: '#DC3545' }}>
                                 <ShoppingCartIcon />
                             </ListItemIcon>
                             <ListItemText >
@@ -103,9 +103,9 @@ function Dashboard(props) {
                             </ListItemText>
                         </ListItem>
                     </Link>
-                    <Link style={{ textDecoration: 'none', color: '#EC9C31' }} to={`${url}/pay`}>
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/pay`}>
                         <ListItem button>
-                            <ListItemIcon sx={{ color: 'black' }}>
+                            <ListItemIcon sx={{ color: '#DC3545' }}>
                                 <PaymentsIcon />
                             </ListItemIcon>
                             <ListItemText >
@@ -113,9 +113,9 @@ function Dashboard(props) {
                             </ListItemText>
                         </ListItem>
                     </Link>
-                    <Link style={{ textDecoration: 'none', color: '#EC9C31' }} to={`${url}/review`}>
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/review`}>
                         <ListItem button>
-                            <ListItemIcon sx={{ color: 'black' }}>
+                            <ListItemIcon sx={{ color: '#DC3545' }}>
                                 <ReviewsIcon />
                             </ListItemIcon>
                             <ListItemText >
@@ -126,9 +126,9 @@ function Dashboard(props) {
                 </Box>
                     :
                     <Box>
-                        <Link style={{ textDecoration: 'none', color: '#EC9C31' }} to={`${url}/manageAllOrders`}>
+                        <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/manageAllOrders`}>
                             <ListItem button>
-                                <ListItemIcon sx={{ color: 'black' }}>
+                                <ListItemIcon sx={{ color: '#DC3545' }}>
                                     <SettingsApplicationsIcon />
                                 </ListItemIcon>
                                 <ListItemText >
@@ -136,9 +136,9 @@ function Dashboard(props) {
                                 </ListItemText>
                             </ListItem>
                         </Link>
-                        <Link style={{ textDecoration: 'none', color: '#EC9C31' }} to={`${url}/manageProducts`}>
+                        <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/manageProducts`}>
                             <ListItem button>
-                                <ListItemIcon sx={{ color: 'black' }}>
+                                <ListItemIcon sx={{ color: '#DC3545' }}>
                                     <SettingsIcon />
                                 </ListItemIcon>
                                 <ListItemText >
@@ -146,9 +146,9 @@ function Dashboard(props) {
                                 </ListItemText>
                             </ListItem>
                         </Link>
-                        <Link style={{ textDecoration: 'none', color: '#EC9C31' }} to={`${url}/addProduct`}>
+                        <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/addProduct`}>
                             <ListItem button>
-                                <ListItemIcon sx={{ color: 'black' }}>
+                                <ListItemIcon sx={{ color: '#DC3545' }}>
                                     <AddCircleIcon />
                                 </ListItemIcon>
                                 <ListItemText >
@@ -156,9 +156,9 @@ function Dashboard(props) {
                                 </ListItemText>
                             </ListItem>
                         </Link>
-                        <Link style={{ textDecoration: 'none', color: '#EC9C31' }} to={`${url}/makeAdmin`}>
+                        <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/makeAdmin`}>
                             <ListItem button>
-                                <ListItemIcon sx={{ color: 'black'}}>
+                                <ListItemIcon sx={{ color: '#DC3545'}}>
                                     <AdminPanelSettingsIcon />
                                 </ListItemIcon>
                                 <ListItemText >
@@ -173,17 +173,17 @@ function Dashboard(props) {
                 <Toolbar />
                 <Box sx={{ textAlign: 'center' }}>
                     <ListItem>
-                        <ListItemIcon sx={{ color: 'black' }}>
+                        <ListItemIcon sx={{ color: '#DC3545' }}>
                             <AccountCircleIcon />
                         </ListItemIcon>
                         <ListItemText>
                             <h5 className="my-4 text-color">
                                 {user.displayName}</h5>
                         </ListItemText>
-                    </ListItem>
-                    <ColorButton
-                        sx={{ width: '90%' }}
-                        onClick={logout} variant="contained">Logout</ColorButton>
+                    </ListItem>  
+                        <button style={{ width: '90%' }} onClick={logout} className="btn btn-outline-danger">
+                        Logout
+                        </button>
                 </Box>
             </List>
         </div>
@@ -198,7 +198,7 @@ function Dashboard(props) {
                 position="fixed"
                 sx={{
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
-                    ml: { sm: `${drawerWidth}px` }, backgroundColor: '#FBEBD6', color: 'black'
+                    ml: { sm: `${drawerWidth}px` }, backgroundColor: '#DC3545', color: 'white'
                 }}
             >
                 <Toolbar>

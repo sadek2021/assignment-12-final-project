@@ -44,7 +44,9 @@ const MakeAdmin = () => {
                     type="email"
                     value={email}
                     autoComplete="email" variant="standard" />
-                <ColorButton type="submit" variant="contained">MAKE ADMIN</ColorButton>
+                <button  type="submit" className="btn btn-outline-danger">
+                    MAKE ADMIN
+                </button>
             </form>
         </div>
     );
