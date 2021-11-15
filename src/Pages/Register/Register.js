@@ -5,6 +5,8 @@ import useAuth from '../../Hooks/useAuth/useAuth';
 import './Register.css';
 import { useHistory, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 const Register = () => {
     const { allContext } = useAuth();
@@ -18,7 +20,7 @@ const Register = () => {
         loginUsingGoogle,
         handleRegistration,
         error,
-        setError } = allContext;
+        setError, saveUser, name, email } = allContext;
 
     /* Redirect */
     const location = useLocation();
@@ -29,7 +31,9 @@ const Register = () => {
     const handleGoogleLogin = () => {
         loginUsingGoogle()
             .then(result => {
-                setUser(result.user);
+                const user = result.user
+                setUser(user);
+                saveUser(user.email, user.displayName, 'PUT');
                 setError('');
                 history.push(redirect_url);
             })
@@ -44,8 +48,12 @@ const Register = () => {
         e.preventDefault();
         handleRegistration()
             .then(result => {
+                const newUser = { email, displayName: name }
+                setUser(newUser);
                 setUser(result.user);
                 setUserName();
+                // save user to database
+                saveUser(email, name, 'POST');
                 setError('');
                 history.push(redirect_url);
                 window.location.reload();
@@ -57,62 +65,65 @@ const Register = () => {
     }
     console.log(error);
     return (
-        <div className="container d-flex mx-auto align-items-center g-4 mt-5">
-            <div>
-                <img src="https://www.register.com/_jcr_content/root/section_338972426/responsivecolumns_20/column-2/itl_copy_copy.coreimg.jpeg/1610563184423/triffold3.jpeg" alt="" />
-            </div>
-            <div className=" w-50 mx-auto">
-                <h1 className="text-center text-danger">Register an Account</h1>
+        <div>
+            <Header></Header>
+            <div className="container d-lg-flex mx-auto align-items-center g-4 mt-5">
+                <div>
+                    <img src="https://www.register.com/_jcr_content/root/section_338972426/responsivecolumns_20/column-2/itl_copy_copy.coreimg.jpeg/1610563184423/triffold3.jpeg" alt="" />
+                </div>
+                <div className="  mx-auto mt-5">
+                    <h1 className="text-center text-danger">Register an Account</h1>
 
-                {/*  Submit */}
-                <form onSubmit={register} className="mt-5">
-                    <div className="mb-3">
-                        <label htmlFor="validationDefault01" className="form-label">Name:</label>
+                    {/*  Submit */}
+                    <form onSubmit={register} className="mt-5">
+                        <div className="mb-3">
+                            <label htmlFor="validationDefault01" className="form-label">Name:</label>
 
-                        {/*Blur */}
-                        <input onBlur={getName} type="text" className="form-control" id="validationDefault01" placeholder="Name" aria-label="Name"
-                            required />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="validationDefault02" className="form-label">Email:</label>
-
-                        {/* Blur */}
-                        <input onBlur={getEmail} type="email" className="form-control" id="validationDefault02"
-                            placeholder="Email" aria-label="Email"
-                            autoComplete="email" required />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="validationDefault03" className="form-label">Password:</label>
-                        {/* Blur */}
-                        <input onBlur={getPassword} type="password" className="form-control" id="validationDefault03"
-                            placeholder="Password" aria-label="Password"
-                            autoComplete="current-password" required />
-                        <div className="text-danger">
-                            <p>{error}</p>
+                            {/*Blur */}
+                            <input onBlur={getName} type="text" className="form-control" id="validationDefault01" placeholder="Name" aria-label="Name"
+                                required />
                         </div>
-                    </div>
-                    <div className="mb-3">
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="invalidCheck2" required />
-                            <label className="form-check-label" htmlFor="invalidCheck2">
-                                Agree to terms and conditions
-                            </label>
+                        <div className="mb-3">
+                            <label htmlFor="validationDefault02" className="form-label">Email:</label>
+
+                            {/* Blur */}
+                            <input onBlur={getEmail} type="email" className="form-control" id="validationDefault02"
+                                placeholder="Email" aria-label="Email"
+                                autoComplete="email" required />
                         </div>
+                        <div className="mb-3">
+                            <label htmlFor="validationDefault03" className="form-label">Password:</label>
+                            {/* Blur */}
+                            <input onBlur={getPassword} type="password" className="form-control" id="validationDefault03"
+                                placeholder="Password" aria-label="Password"
+                                autoComplete="current-password" required />
+                            <div className="text-danger">
+                                <p>{error}</p>
+                            </div>
+                        </div>
+                        <div className="mb-3">
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value="" id="invalidCheck2" required />
+                                <label className="form-check-label" htmlFor="invalidCheck2">
+                                    Agree to terms and conditions
+                                </label>
+                            </div>
+                        </div>
+                        <h6>Already have an account? <Link to='/login'>Login</Link></h6>
+                        <div className="d-grid mt-3">
+                            <button className="btn btn-outline-danger" type="submit">Register</button>
+                        </div>
+                    </form>
+                    <div className="text-center mt-2">
+                        <h6>Or</h6>
+                        {/* On Click */}
+                        <button onClick={handleGoogleLogin} className="btn btn-outline-danger mb-5">
+                            <img width="40px" src={icon1} alt="" /> Continue with Google
+                        </button>
                     </div>
-                    <h6>Already have an account? <Link to='/login'>Login</Link></h6>
-                    <div className="d-grid mt-3">
-                        <button className="btn btn-outline-danger" type="submit">Register</button>
-                    </div>
-                </form>
-                <div className="text-center mt-2">
-                    <h6>Or</h6>
-                    <h6>Continue With</h6>
-                    {/* On Click */}
-                    <button onClick={handleGoogleLogin} className="btn">
-                        <img width="40px" src={icon1} alt="" />
-                    </button>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

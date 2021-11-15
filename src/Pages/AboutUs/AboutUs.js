@@ -1,30 +1,33 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import image from './../../Images/medicare.png'
 import './AboutUs.css'
 
 const AboutUs = () => {
     return (
         <div>
+            <Header></Header>
             <div className="mb-5 about-banner text-center">
                 <h1 className="about-title fw-bold text-danger">ABOUT US</h1>
                 <h5 className="text-white">Time travel is the concept of movement between certain points in time.</h5>
             </div>
             <div className="container-fluid">
-                {/* <div className="row mx-auto g-5 align-items-center">
-                    <div className="col-lg-5">
+                <div className="row mx-auto g-5 align-items-center">
+                    <div className="col-lg-7">
                         <img className="img-fluid" src="https://tevily-html.vercel.app/assets/images/backgrounds/why-choose-left-bg.jpg" alt="" />
                     </div>
-                    <div className="col-lg-7">
+                    <div className="col-lg-5">
                         <h5>Welcome To Best Medical & Health Care</h5>
-                        <h1 className=" fw-bold text-danger mb-5">Get Best & Amazing Experice With Our Professional Destinations</h1>
-                        <h6 className="mb-4">MedDestinations Are A Medical And Health Department Provider Institutions. Suitable For Healthcare, Medical, Doctor, Dental, Dentist, Pharmacy, Health And Any Related Medical Care Field.</h6>
+                        <h1 className=" fw-bold text-danger mb-5">Get Best & Amazing Experice With Our Professional Reviews</h1>
+                        <h6 className="mb-4">MedReviews Are A Medical And Health Department Provider Institutions. Suitable For Healthcare, Medical, Doctor, Dental, Dentist, Pharmacy, Health And Any Related Medical Care Field.</h6>
                         <div className="my-4">
                             <div className="accordion" id="accordionExample">
                                 <div className="accordion-item rounded">
                                     <h2 className="accordion-header" id="headingOne">
                                         <button className="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <strong>Professional Destinations</strong>
+                                            <strong>Professional Reviews</strong>
                                         </button>
                                     </h2>
                                     <div id="collapseOne" className="accordion-collapse collapse show"
@@ -53,13 +56,13 @@ const AboutUs = () => {
                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseThree" aria-expanded="false"
                                             aria-controls="collapseThree">
-                                            <strong> High Packages</strong>
+                                            <strong> High Products</strong>
                                         </button>
                                     </h2>
                                     <div id="collapseThree" className="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            Abdominal Hysterectomy Package (With or without BSO) High Risk with Epidural.
+                                            Abdominal Hysterectomy Product (With or without BSO) High Risk with Epidural.
                                         </div>
                                     </div>
                                 </div>
@@ -104,26 +107,27 @@ const AboutUs = () => {
                                     <div id="collapseSix" className="accordion-collapse collapse" aria-labelledby="headingSix"
                                         data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            24/7 support (also popularly known as 24/7 customer service or 24/7 tech support) is a customer service strategy.
+                                            24/7 support (also popularly known as 24/7 customer product or 24/7 tech support) is a customer product strategy.
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
                 <div className="d-lg-flex align-items-center my-5">
                     <div className="m-5 col-lg-6">
-                        <h1 className=" fw-bold text-danger">Travel Time is a World Leading Online Tour Booking Platform</h1>
+                        <h1 className=" fw-bold">WELCOME TO <span className="text-danger">TIMEKEEPER</span></h1>
                         <br />
                         <h5 className="mb-5">Whether you’re hiking a forest trail or whale watching, the local insight you’ll get from a guide will enrich your experience, as well as taking some of the trip planning off a plate.</h5>
                         <p>Travelers are always discoverers, especially those who travel by air. There are no signposts in the sky to show a man has passed that way before. There are no channels marked. The flier breaks each second into new uncharted seas.</p>
                     </div>
                     <div className="col-lg-6 about-us">
-                        <img className="img-fluid" width="600" src="https://travel-time.cmsmasters.net/wp-content/uploads/2015/07/rtydj.jpg" alt="" />
+                        <img className="img-fluid" width="600" src="https://cdn.shopify.com/s/files/1/0039/3740/2989/files/694x424_e23c122a-8d28-40ec-ba10-87e28f07c2ba.jpg" alt="" />
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

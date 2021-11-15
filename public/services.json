@@ -1,72 +1,86 @@
 [
     {
-        "id": 1,
+        
         "img": "https://cdn.shopify.com/s/files/1/1692/8885/products/product-11_2000x.jpg",
         "name": "Chronograph Watch",
         "detail": "Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.",
-        "price": "$399"
+        "price": "399"
     },
     {
-        "id": 2,
+        
         "img": "https://cdn.shopify.com/s/files/1/1692/8885/products/product-19_2000x.jpg",
-        "name": "CONCORD WATCH",
-        "detail": "Barbados is an eastern Caribbean island and an independent British Commonwealth nation.",
-        "price": "$599"
+        "name": "Concord Watch",
+        "detail": "New Arrivals · Shop All Watches · Women's Design. Men's Design. Browse by Collection · Mariner · Saratoga · Mariner SL · Inside Concord · Concord Story.",
+        "price": "599"
     },
     {
-        "id": 3,
+        
         "img": "https://cdn.shopify.com/s/files/1/1692/8885/products/product-16_2000x.jpg",
-        "name": "DIAMOND WATCH",
-        "detail": "The U.S. Virgin Islands are a group of Caribbean islands and islets. A U.S. territory.",
-        "price": "$300"
+        "name": "Doamond Watch",
+        "detail": "TraxNYC offers an extraordinary selection of men's diamond watches from Rolex, Cartier, Breitling, Joe Rodeo and more. Shop gold diamond watches here!",
+        "price": "300"
     },
     {
-        "id": 4,
+        
         "img": "https://cdn.shopify.com/s/files/1/1692/8885/products/product-13_fea94dfc-8ebe-4d44-b628-7075e72f9ab1.jpg",
         "name": "Electric watch",
-        "detail": "As a fragile republic, in 1940 Cuba attempted to strengthen its democratic system.",
-        "price": "$499"
+        "detail": "In horology, the term electric watch is used for the first generation electrically-powered wristwatches which were first publicly displayed by both Elgin.",
+        "price": "499"
     },
     {
-        "id": 5,
+        
         "img": "https://cdn.shopify.com/s/files/1/1692/8885/products/product-7.jpg",
         "name": "Fashion Watch",
-        "detail": "Dominican Republic is a Caribbean nation that shares island of Hispaniola.",
-        "price": "$699"
+        "detail": "Online watch store for mens and womens fashion watches, Our curren fashion watches are designed for both men and women. Get your fashion watch.",
+        "price": "699"
     },
     {
-        "id": 6,
+        
         "img": "https://cdn.shopify.com/s/files/1/1692/8885/products/product-18_2000x.jpg",
-        "name": "GLYCINE WATCH",
-        "detail": "Jamaica, a Caribbean island nation, has a lush topography of mountains a beautiful place.",
-        "price": "$449"
+        "name": "Glycine Watch",
+        "detail": "Glycine Watch SA is a Swiss wristwatch manufacturer, founded in 1914, and based in Bienne, Switzerland.",
+        "price": "449"
     },
     {
-        "id": 7,
+        
         "img": "https://cdn.shopify.com/s/files/1/1692/8885/products/product-15.jpg",
         "name": "Jules Jurgensen",
-        "detail": "Guadeloupe, a French overseas region, is an island group in the southern Caribbean Sea.",
-        "price": "$299"
+        "detail": "Jules Jurgensen was a watchmaking company. It was founded by Jürgen Jürgensen in 1740 in Denmark, when Jürgen Jürgensen went into partnership with Isaac.",
+        "price": "299"
     },
     {
-        "id": 8,
+        
         "img": "https://cdn.shopify.com/s/files/1/1692/8885/products/product4_f7c8b883-07d7-4a22-b04e-d56e9277d2cf.jpg",
         "name": "Military Watch",
-        "detail": "Curaçao, a Dutch Caribbean island, is known for its beaches tucked into coves expansive.",
-        "price": "$700"
+        "detail": "Military Watch is a provider of reliable and insightful analysis into military and military related affairs across the world. From Asia-Pacific tensions.",
+        "price": "700"
     },
     {
-        "id": 9,
+        
         "img": "https://cdn.shopify.com/s/files/1/0564/2705/3216/products/shop-11_600x.jpg",
         "name": "Gold Case Automatic",
-        "detail": "Curaçao, a Dutch Caribbean island, is known for its beaches tucked into coves expansive.",
-        "price": "$700"
+        "detail": "Get the best deals on Gold Case Mechanical (Automatic) Wristwatches when you shop the ... Mens Rolex Day-Date President 18k Yellow Gold Watch Bark Champagne.",
+        "price": "700"
     },
     {
-        "id": 10,
+        
         "img": "https://cdn.shopify.com/s/files/1/0564/2705/3216/products/shop-6_600x.jpg",
         "name": "Classic Roman",
-        "detail": "Curaçao, a Dutch Caribbean island, is known for its beaches tucked into coves expansive.",
-        "price": "$700"
+        "detail": "The Classic Roman is an elegant timepiece with stunning bright blue hands on a white roman 40mm dial. The dial is covered by sapphire glass and a 7.7mm.",
+        "price": "700"
+    },
+    {
+        
+        "img": "https://cdn.shopify.com/s/files/1/1692/8885/products/product-10_2000x.jpg",
+        "name": "Space Watch",
+        "detail": "GLOBAL is a digital magazine and portal for those interested in space and the far-reaching impact that space developments.",
+        "price": "750"
+    },
+    {
+        
+        "img": "https://cdn.shopify.com/s/files/1/1692/8885/products/product-1_2000x.jpg",
+        "name": "Tommy Bahama",
+        "detail": "Tommy Bahama is the purveyor of island lifestyles and maker of luxury lifestyle clothing and accessories. Tommy Bahama's offerings include apparel for men.",
+        "price": "800"
     }
 ]

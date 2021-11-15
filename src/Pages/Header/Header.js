@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './../../Images/favicon/logo.png'
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth/useAuth';
+import logo from '../../Images/favicon/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -23,36 +23,35 @@ const Header = () => {
                                 <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className="nav-link" to="/products">
+                                    Products
+                                </Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="nav-link" to="/aboutUs">
                                     About Us
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/services">
-                                    Packages
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/destinations">
-                                    Destinations
                                 </Link>
                             </li>
                         </ul>
                         {user.email ?
                             <>
-
-                                <div className="btn-group">
+                                <li className="navbar-nav nav-item me-3">
+                                    <Link className="nav-link" to="/dashboard">
+                                        Dashboard
+                                    </Link>
+                                </li>
+                                {/* <div className="btn-group">
                                     <button type="button" className="btn btn-outline-danger">{user.displayName}</button>
                                     <button type="button" className="btn btn-outline-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                                         <span className="visually-hidden">Toggle Dropdown</span>
                                     </button>
                                     <ul className="dropdown-menu">
-                                        <Link className="dropdown-item" to="/myBooking">My Booking</Link>
-                                        <Link className="dropdown-item" to="/allBooking">All Booking</Link>
-                                        <Link className="dropdown-item" to="/addNewPackage">Add New Booking</Link>
+                                        <Link className="dropdown-item" to="/myOrder">My Order</Link>
+                                        <Link className="dropdown-item" to="/allOrder">All Order</Link>
+                                        <Link className="dropdown-item" to="/addNewProduct">Add New Order</Link>
                                     </ul>
-                                </div>
-                                {/* <h5 className="me-3 text-danger">{user.displayName}</h5> */}
+                                </div> */}
+                                <h5 className="me-3 text-danger">{user.displayName}</h5>
                                 <button onClick={logout} className="mx-2 btn btn-outline-danger">Logout</button>
                             </> :
                             <div className="d-flex gap-3">

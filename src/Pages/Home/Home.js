@@ -1,26 +1,21 @@
 import React from 'react';
 import { Carousel, Row } from 'react-bootstrap';
-import useServices from '../../Hooks/useServices/useServices';
-import ServiceItem from '../Item/ServiceItem';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import useProducts from '../../Hooks/useProducts/useProducts';
 import './Home.css';
-// import useDestinations from '../../Hooks/useDestinations/useDestinations';
-// import DestinationsItem from '../Item/DestinationsItem';
-import useDestinations from '../../Hooks/useDestinarions/useDestinations';
-import aboutImg from './../../Images/aboutImg.png';
-import { faCheckSquare } from '@fortawesome/free-regular-svg-icons';
-import DestinationsItem from '../Item/DestinationsItem';
+import ReviewsItem from '../Item/ReviewsItem';
+import ProductItem from '../Item/ProductItem';
+import useReviews from '../../Hooks/useReviews/useReviews';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
-    const { services } = useServices();
-    const [destinations] = useDestinations()
-    const newDestinations = destinations.slice(0, 6)
-
-    /* Icon */
-    const checkIcon = <FontAwesomeIcon icon={faCheckSquare} />
+    const { products } = useProducts();
+    const { reviews } = useReviews()
+    // const newReviews = reviews.slice(0, 6)
 
     return (
         <div>
+            <Header></Header>
             <div className="mb-5">
                 <Carousel>
                     <Carousel.Item interval={2000}>
@@ -63,13 +58,14 @@ const Home = () => {
             </div>
             <div className="container">
                 <div className="my-5 text-center">
-                    <h1 className="fw-bold text-danger">OUR COLLECTION</h1>
-                    <p>Enjoy our Cheap Holiday packages and create your own most memorable moment and a <br /> trip to remember with Travel Time with your loved ones.</p>
+                    <h1 className="fw-bold text-danger">Our Watch Collection</h1>
+                    <p>Your watch and strap should go together perfectly,
+                        but that doesn't mean you can't experiment with different combinations.</p>
                 </div>
                 <div className="container">
-                    <Row xs={1} md={4} className="g-5 mb-5 p-4">
+                    <Row xs={1} md={4} className="g-3 mb-5 p-4">
                         {
-                            services.map(service => <ServiceItem key={service.id} service={service}></ServiceItem>)
+                            products.map(product => <ProductItem key={product.id} product={product}></ProductItem>)
                         }
                     </Row>
                 </div>
@@ -92,17 +88,18 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="my-5 text-center">
-                    <h1 className="fw-bold text-danger">Destinations</h1>
-                    <p>There are three basic forms of tourism: domestic tourism,  inbound tourism, and outbound tourism. <br /> Domestic tourism refers to activities of a visitor within their country of residence and outside of their home.</p>
+                    <h1 className="fw-bold text-danger">Our Customer Reviews</h1>
+                    <p></p>
                 </div>
                 <div className="container my-5">
                     <Row xs={1} md={3} className="g-5 p-4">
                         {
-                            newDestinations.map(destination => <DestinationsItem key={destination.id} destination={destination}></DestinationsItem>)
+                            reviews.map(review => <ReviewsItem key={review.id} review={review}></ReviewsItem>)
                         }
                     </Row>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
