@@ -9,7 +9,7 @@ const ManageProductItem = (props) => {
                 <Card className="hover-card">
                     <Card.Img variant="top" src={img} />
                     <Card.Body>
-                        <Card.Title className="text-color">{name}</Card.Title>
+                        <Card.Title className="text-danger">{name}</Card.Title>
                         <div>
                             <p>{detail}</p>
                         </div>

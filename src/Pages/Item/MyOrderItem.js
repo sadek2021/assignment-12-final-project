@@ -11,7 +11,7 @@ const MyOrderItem = (props) => {
                 <Card className="hover-card">
                     <Card.Img variant="top" src={img} />
                     <Card.Body>
-                        <Card.Title className="text-color fw-bold">{name}</Card.Title>
+                        <Card.Title className="text-danger fw-bold">{name}</Card.Title>
                         <div>
                             <h6>Name: {props.order.name}</h6>
                             <h6>Email: {email}</h6>
