@@ -58,7 +58,7 @@ const ManageAllOrders = () => {
             </div>
             <div className="container">
                 <div className="container my-5">
-                    <Row xs={1} md={3} className="g-5 p-4">
+                    <Row xs={1} md={3} className="g-3 p-4">
                         {
                             orders.map(order => <OrderItem key={order._id} order={order} handleDeleteProduct={handleDeleteProduct} handleUpdateStatus={handleUpdateStatus}></OrderItem>)
                         }

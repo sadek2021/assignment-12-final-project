@@ -6,7 +6,7 @@ const OrderItem = (props) => {
     const { _id, email, address, phone, status } = props.order;
     return (
         <div>
-            <Col className="shadow-lg">
+            <Col style={{border: '1px solid #DC3545', borderRadius: '5px'}}>
                 <Card className="hover-card">
                     <Card.Img variant="top" src={img} />
                     <Card.Body>

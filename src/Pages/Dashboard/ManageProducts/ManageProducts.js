@@ -32,7 +32,7 @@ const ManageProducts = () => {
             </div>
             <div className="container">
                 <div className="container my-5">
-                    <Row xs={1} md={3} className="g-5 p-4">
+                    <Row xs={1} md={3} className="g-3 p-4">
                         {
                             products.map(product => <ManageProductItem key={product._id} product={product} handleDeleteProduct={handleDeleteProduct}></ManageProductItem>)
                         }

@@ -43,8 +43,8 @@ const MakeAdmin = () => {
                     onChange={handleOnChange}
                     type="email"
                     value={email}
-                    autoComplete="email" variant="standard" />
-                <button  type="submit" className="btn btn-outline-danger">
+                    autoComplete="email" variant="standard" /> <br />
+                <button  type="submit" className="btn btn-outline-danger mt-3">
                     MAKE ADMIN
                 </button>
             </form>

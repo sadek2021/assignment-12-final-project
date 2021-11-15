@@ -6,7 +6,7 @@ const ReviewItem = (props) => {
     const { name, email, description, rating, img } = props.review;
     return (
         <div>
-            <Col className="shadow-lg">
+            <Col style={{border: '1px solid #DC3545', borderRadius: '5px'}}>
                 <Card className="hover-card p-3">
                     <Row className=" align-items-center">
                         <Col xs={4}>
