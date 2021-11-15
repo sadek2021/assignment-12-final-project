@@ -53,8 +53,8 @@ const ManageAllOrders = () => {
 
     return (
         <div>
-            <div className="banner-order banner-bs mb-5 text-center">
-                <h1 className="text-danger fw-bold">All Order Details</h1>
+            <div className="banner-order banner-bs my-5 text-center">
+                <h1 className="text-danger fw-bold">Manage All Orders</h1>
             </div>
             <div className="container">
                 <div className="container my-5">
