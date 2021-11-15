@@ -11,7 +11,7 @@ const ManageProducts = () => {
     const handleDeleteProduct = id => {
         const proceed = window.confirm('Are You Sure, You Want To Delete');
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://warm-spire-46407.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

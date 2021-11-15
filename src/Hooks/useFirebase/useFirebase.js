@@ -91,7 +91,7 @@ const useFirebase = () => {
     /* Save user to database */
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://warm-spire-46407.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -104,7 +104,7 @@ const useFirebase = () => {
     /* Find Admin */
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://warm-spire-46407.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
             .finally(() => setLoading(false));

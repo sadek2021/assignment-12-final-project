@@ -12,7 +12,7 @@ const Reviews = () => {
         const proceed = window.confirm('Are You Sure, You Want To Provide a Review');
         if (proceed) {
             data.img = user.photoURL;
-            axios.post('http://localhost:5000/reviews', data)
+            axios.post('https://warm-spire-46407.herokuapp.com/reviews', data)
                 .then(res => {
                     if (res.data.insertedId) {
                         alert('Review Successfully Added');

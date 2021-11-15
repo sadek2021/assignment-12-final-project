@@ -63,9 +63,9 @@ const Home = () => {
                         but that doesn't mean you can't experiment with different combinations.</p>
                 </div>
                 <div className="container">
-                    <Row xs={1} md={4} className="g-3 mb-5 p-4">
+                    <Row xs={1} md={3} className="g-3 mb-5 p-4">
                         {
-                            products.map(product => <ProductItem key={product.id} product={product}></ProductItem>)
+                            products.slice(0,6).map(product => <ProductItem key={product.id} product={product}></ProductItem>)
                         }
                     </Row>
                 </div>

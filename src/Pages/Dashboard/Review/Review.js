@@ -13,7 +13,7 @@ const Review = () => {
         const proceed = window.confirm('Are You Sure, You Want To Provide a Review');
         if (proceed) {
             data.img = user.photoURL;
-            axios.post('http://localhost:5000/reviews', data)
+            axios.post('https://warm-spire-46407.herokuapp.com/reviews', data)
                 .then(res => {
                     if (res.data.insertedId) {
                         alert('Review Successfully Added');
@@ -24,7 +24,7 @@ const Review = () => {
     };
     return (
         <div className="add-review review-bg text-center">
-            <h1>Give Your Valuable Review</h1>
+            <h1 className="text-white">Give Your Valuable Review</h1>
             <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
                 <input defaultValue={user.displayName} {...register("name", { required: true })} />
                 <input defaultValue={user.email} {...register("email", { required: true })} />
@@ -33,7 +33,7 @@ const Review = () => {
                 {/* <ColorButton sx={{ width: '200%', mt: 3 }}
                     type="submit"
                     variant="danger">SUBMIT</ColorButton> */}
-                    <input type="submit" />
+                <input type="submit" />
             </form>
         </div>
     );

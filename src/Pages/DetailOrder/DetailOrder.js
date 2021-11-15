@@ -22,7 +22,7 @@ const DetailOrder = () => {
         data.product = orderData;
         data.status = 'Pending';
 
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://warm-spire-46407.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Order Processed Successfully');

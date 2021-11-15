@@ -11,7 +11,7 @@ const MyOrders = () => {
     // console.log(user);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://warm-spire-46407.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 const myOrder = data.filter(order => order.email === user.email);
@@ -23,7 +23,7 @@ const MyOrders = () => {
     const handleDeleteProduct = id => {
         const proceed = window.confirm('Are You Sure, You Want To Cancel');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://warm-spire-46407.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
