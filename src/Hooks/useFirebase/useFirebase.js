@@ -16,7 +16,7 @@ const useFirebase = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [loading, setLoading] = useState(true);
     const [admin, setAdmin] = useState(false);
-
+    console.log(name, email)
     const auth = getAuth();
 
     /* Provider */
@@ -91,6 +91,7 @@ const useFirebase = () => {
     /* Save user to database */
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
+        console.log(user)
         fetch('https://warm-spire-46407.herokuapp.com/users', {
             method: method,
             headers: {

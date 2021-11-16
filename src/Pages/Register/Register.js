@@ -48,15 +48,17 @@ const Register = () => {
         e.preventDefault();
         handleRegistration()
             .then(result => {
+                console.log(result)
                 const newUser = { email, displayName: name }
+                console.log(newUser)
                 setUser(newUser);
                 setUser(result.user);
                 setUserName();
                 // save user to database
                 saveUser(email, name, 'POST');
+                console.log(email, name)
                 setError('');
                 history.push(redirect_url);
-                window.location.reload();
             })
             .catch(error => {
                 setError(error.message);
