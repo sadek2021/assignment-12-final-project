@@ -2,12 +2,12 @@
 
 Our Live Website. [Timekeeper](https://time-keeper-de0cb.web.app/).
 
-### => Your watch and strap should go together perfectly, but that doesn't mean you can't experiment with different combinations.
+### => A completed website with private route and login/register option.
 
-### => The new Lawson collection is already here! This quartz Lawson Franklin 38 model, designed with simplicity and elegance.
+### => My order page is a private/protected route. If the user is not logged in, the private route redirects to the login page.
 
-### => We have World class watch brand collection with customer satisfaction.
+### => Build a dashboard to manage the admin panel where admin can add or remove products.
 
-### => A Unique Watch that Fits Your Style, A New Look for your Watch.
+### => If a user is logged in, he/she can see the dashboard and inside the dashboard a normal user (not an admin) can see  pay, My Orders, Review, Logout.
 
-### => Luxury watches are destined never to go out of fashion. Even though we now have clocks on our phones, nothing beats the exceptional elegance of a beautifully crafted timepiece.
+### => Users can add a review and that review will appear on the home page. 
