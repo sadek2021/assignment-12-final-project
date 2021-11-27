@@ -8,6 +8,6 @@ Our Live Website. [Timekeeper](https://time-keeper-de0cb.web.app/).
 
 ### => Build a dashboard to manage the admin panel where admin can add or remove products.
 
-### => If a user is logged in, he/she can see the dashboard and inside the dashboard a normal user (not an admin) can see  pay, My Orders, Review, Logout.
+### => If a user is logged in, he/she can see the dashboard and inside the dashboard a normal user (not an admin) can see  pay, my orders, review, logout.
 
 ### => Users can add a review and that review will appear on the home page. 
